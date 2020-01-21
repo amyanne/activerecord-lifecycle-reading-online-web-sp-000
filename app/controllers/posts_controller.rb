@@ -1,4 +1,10 @@
 class PostsController < ApplicationController
+  belongs_to :author
+  validate :is_title_case
+ 
+  # New Code!!
+  
+  before_validation :make_title_case
 	def index
 		@posts = Post.all
 	end
