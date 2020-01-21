@@ -15,6 +15,12 @@ class Post < ActiveRecord::Base
       errors.add(:title, "Title must be in title case")
     end
   end
+  
+  def email_author_about_post
+    # Not implemented.
+    # For more information: https://guides.rubyonrails.org/action_mailer_basics.html
+  end
+  
 
   def make_title_case
     self.title = self.title.titlecase
